@@ -72,6 +72,10 @@
                 tempKelvin = currentTemp + 273.15
                 'Rankine calculation
                 tempRankine = currentTemp * 1.8 + 491.67
+                'Output
+                lblOutput1.Text = tempFahrenheit.ToString("n") & "°"
+                lblOutput2.Text = tempKelvin.ToString("n") & "°"
+                lblOutput3.Text = tempRankine.ToString("n") & "°"
             End If
             If rdoFahrenheit.Checked = True Then
                 'Celsius calculation
@@ -80,6 +84,10 @@
                 tempKelvin = ((currentTemp - 32) / 1.8) + 273.15
                 'Rankine calculation
                 tempRankine = (currentTemp - 32) + 491.67
+                'Output
+                lblOutput1.Text = tempCelsius.ToString("n") & "°"
+                lblOutput2.Text = tempKelvin.ToString("n") & "°"
+                lblOutput3.Text = tempRankine.ToString("n") & "°"
             End If
             If rdoKelvin.Checked = True Then
                 'Celsius calculation
@@ -88,6 +96,10 @@
                 tempFahrenheit = ((currentTemp - 273.15) * 1.8) + 32
                 'Rankine calculation
                 tempRankine = ((currentTemp - 273.15) * 1.8) + 491.67
+                'Output
+                lblOutput1.Text = tempCelsius.ToString("n") & "°"
+                lblOutput2.Text = tempFahrenheit.ToString("n") & "°"
+                lblOutput3.Text = tempRankine.ToString("n") & "°"
             End If
             If rdoRankine.Checked = True Then
                 'Celsius calculation
@@ -96,24 +108,7 @@
                 tempFahrenheit = (currentTemp - 491.67) + 32
                 'Kelvin calculation
                 tempKelvin = ((currentTemp - 491.67) / 1.8) + 273.15
-            End If
-            'Temperature outputs
-            If rdoCelsius.Checked = True Then
-                lblOutput1.Text = tempFahrenheit.ToString("n") & "°"
-                lblOutput2.Text = tempKelvin.ToString("n") & "°"
-                lblOutput3.Text = tempRankine.ToString("n") & "°"
-            End If
-            If rdoFahrenheit.Checked = True Then
-                lblOutput1.Text = tempCelsius.ToString("n") & "°"
-                lblOutput2.Text = tempKelvin.ToString("n") & "°"
-                lblOutput3.Text = tempRankine.ToString("n") & "°"
-            End If
-            If rdoKelvin.Checked = True Then
-                lblOutput1.Text = tempCelsius.ToString("n") & "°"
-                lblOutput2.Text = tempFahrenheit.ToString("n") & "°"
-                lblOutput3.Text = tempRankine.ToString("n") & "°"
-            End If
-            If rdoRankine.Checked = True Then
+                'Output
                 lblOutput1.Text = tempCelsius.ToString("n") & "°"
                 lblOutput2.Text = tempFahrenheit.ToString("n") & "°"
                 lblOutput3.Text = tempKelvin.ToString("n") & "°"
